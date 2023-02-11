@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20230207 21:40:55.639" rpa="false" schemaversion="2">
+<suite id="s1" name="BuscaCepTest" source="C:\Testes\projeto b3\Robot_BuscaCep\Tests\BuscaCepTest.robot">
+<test id="s1-t1" name="Cenario: Acessar o busca cep dos correios e inserir um cep especifico">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<msg timestamp="20230207 21:40:55.858" level="TRACE">Arguments: [  ]</msg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230207 21:40:55.858" level="TRACE">Arguments: [ "sys.modules['selenium.webdriver'].ChromeOptions()" | 'sys, selenium.webdriver' ]</msg>
+<msg timestamp="20230207 21:40:55.858" level="TRACE">Return: &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt;</msg>
+<msg timestamp="20230207 21:40:55.858" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt;</msg>
+<status status="PASS" starttime="20230207 21:40:55.858" endtime="20230207 21:40:55.859"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_argument' | '--disable-extensions' ]</msg>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.859" endtime="20230207 21:40:55.859"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_argument' | '--disable-gpu' ]</msg>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.859" endtime="20230207 21:40:55.859"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_argument' | '--no-sandbox' ]</msg>
+<msg timestamp="20230207 21:40:55.859" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.859" endtime="20230207 21:40:55.859"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-logging</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_argument' | '--disable-logging' ]</msg>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.860" endtime="20230207 21:40:55.860"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_argument' | '--incognito' ]</msg>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.860" endtime="20230207 21:40:55.860"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${EXCLUDES}</var>
+<arg>enable-logging</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Arguments: [ 'enable-logging' ]</msg>
+<msg timestamp="20230207 21:40:55.860" level="TRACE">Return: ['enable-logging']</msg>
+<msg timestamp="20230207 21:40:55.860" level="INFO">${EXCLUDES} = ['enable-logging']</msg>
+<status status="PASS" starttime="20230207 21:40:55.860" endtime="20230207 21:40:55.860"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>excludeSwitches</arg>
+<arg>${EXCLUDES}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230207 21:40:55.861" level="TRACE">Arguments: [ &lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; | 'add_experimental_option' | 'excludeSwitches' | ['enable-logging'] ]</msg>
+<msg timestamp="20230207 21:40:55.861" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.860" endtime="20230207 21:40:55.861"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230207 21:40:55.861" level="TRACE">Arguments: [ 'Chrome' | chrome_options=&lt;selenium.webdriver.chrome.options.Options object at 0x0000023704E957E0&gt; ]</msg>
+<msg timestamp="20230207 21:40:55.861" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230207 21:40:56.434" level="DEBUG">POST http://localhost:63497/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"excludeSwitches": ["enable-logging"], "extensions": [], "args": ["--disable-extensions", "--disable-gpu", "--no-sandbox", "--disable-logging", "--incognito"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"excludeSwitches": ["enable-logging"], "extensions": [], "args": ["--disable-extensions", "--disable-gpu", "--no-sandbox", "--disable-logging", "--incognito"]}}}</msg>
+<msg timestamp="20230207 21:40:56.434" level="DEBUG">Starting new HTTP connection (1): localhost:63497</msg>
+<msg timestamp="20230207 21:40:57.169" level="DEBUG">http://localhost:63497 "POST /session HTTP/1.1" 200 792</msg>
+<msg timestamp="20230207 21:40:57.170" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:57.170" level="DEBUG">Created Chrome WebDriver instance with session id 47a45f2b542d9068eafb74f840f5f2bd.</msg>
+<msg timestamp="20230207 21:40:57.170" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20230207 21:40:55.861" endtime="20230207 21:40:57.170"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<msg timestamp="20230207 21:40:57.170" level="TRACE">Arguments: [ 1920 | 1080 ]</msg>
+<msg timestamp="20230207 21:40:57.170" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/window/rect {"x": null, "y": null, "width": 1920, "height": 1080}</msg>
+<msg timestamp="20230207 21:40:57.292" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/window/rect HTTP/1.1" 200 52</msg>
+<msg timestamp="20230207 21:40:57.292" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:57.292" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:57.170" endtime="20230207 21:40:57.292"/>
+</kw>
+<msg timestamp="20230207 21:40:57.293" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:55.858" endtime="20230207 21:40:57.293"/>
+</kw>
+<kw name="Dado que esteja acessando o site dos correios" library="BuscaCep">
+<msg timestamp="20230207 21:40:57.293" level="TRACE">Arguments: [  ]</msg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230207 21:40:57.294" level="TRACE">Arguments: [ 'https://buscacepinter.correios.com.br/app/endereco/index.php' ]</msg>
+<msg timestamp="20230207 21:40:57.294" level="INFO">Opening url 'https://buscacepinter.correios.com.br/app/endereco/index.php'</msg>
+<msg timestamp="20230207 21:40:57.294" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/url {"url": "https://buscacepinter.correios.com.br/app/endereco/index.php"}</msg>
+<msg timestamp="20230207 21:40:58.588" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.588" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.588" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:57.293" endtime="20230207 21:40:58.588"/>
+</kw>
+<msg timestamp="20230207 21:40:58.588" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:57.293" endtime="20230207 21:40:58.588"/>
+</kw>
+<kw name="Quando preencher o cep especifico &quot;80700000&quot;" library="BuscaCep" sourcename="Quando preencher o cep especifico &quot;${mensagem}&quot;">
+<msg timestamp="20230207 21:40:58.589" level="TRACE">Arguments: [ ${mensagem}='80700000' ]</msg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="endereco"]</arg>
+<arg>${mensagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230207 21:40:58.590" level="TRACE">Arguments: [ '//*[@id="endereco"]' | '80700000' ]</msg>
+<msg timestamp="20230207 21:40:58.590" level="INFO">Typing text '80700000' into text field '//*[@id="endereco"]'.</msg>
+<msg timestamp="20230207 21:40:58.590" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/elements {"using": "xpath", "value": "//*[@id=\"endereco\"]"}</msg>
+<msg timestamp="20230207 21:40:58.607" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20230207 21:40:58.608" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.608" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/931ffc1a-a9bb-4425-a1a8-66931470d4d0/clear {"id": "931ffc1a-a9bb-4425-a1a8-66931470d4d0"}</msg>
+<msg timestamp="20230207 21:40:58.636" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/element/931ffc1a-a9bb-4425-a1a8-66931470d4d0/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.636" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.636" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/931ffc1a-a9bb-4425-a1a8-66931470d4d0/value {"text": "80700000", "value": ["8", "0", "7", "0", "0", "0", "0", "0"], "id": "931ffc1a-a9bb-4425-a1a8-66931470d4d0"}</msg>
+<msg timestamp="20230207 21:40:58.660" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/element/931ffc1a-a9bb-4425-a1a8-66931470d4d0/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.660" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.660" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:58.589" endtime="20230207 21:40:58.660"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>//*[@id="tipoCEP"]</arg>
+<arg>Localidade/Logradouro</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230207 21:40:58.660" level="TRACE">Arguments: [ '//*[@id="tipoCEP"]' | 'Localidade/Logradouro' ]</msg>
+<msg timestamp="20230207 21:40:58.661" level="INFO">Selecting options from selection list '//*[@id="tipoCEP"]' by label Localidade/Logradouro.</msg>
+<msg timestamp="20230207 21:40:58.661" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/elements {"using": "xpath", "value": "//*[@id=\"tipoCEP\"]"}</msg>
+<msg timestamp="20230207 21:40:58.671" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20230207 21:40:58.671" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.672" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/name {"id": "2f2fd6ef-0420-41d5-ad36-30172476f08f"}</msg>
+<msg timestamp="20230207 21:40:58.675" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/name HTTP/1.1" 200 18</msg>
+<msg timestamp="20230207 21:40:58.675" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.675" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/name {"id": "2f2fd6ef-0420-41d5-ad36-30172476f08f"}</msg>
+<msg timestamp="20230207 21:40:58.678" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/name HTTP/1.1" 200 18</msg>
+<msg timestamp="20230207 21:40:58.678" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.678" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/attribute/multiple {"name": "multiple", "id": "2f2fd6ef-0420-41d5-ad36-30172476f08f"}</msg>
+<msg timestamp="20230207 21:40:58.681" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/attribute/multiple HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.681" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.682" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/elements {"using": "xpath", "value": ".//option[normalize-space(.) = \"Localidade/Logradouro\"]", "id": "2f2fd6ef-0420-41d5-ad36-30172476f08f"}</msg>
+<msg timestamp="20230207 21:40:58.688" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/element/2f2fd6ef-0420-41d5-ad36-30172476f08f/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20230207 21:40:58.689" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.689" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/235f6f9d-6680-481a-8217-f4690a0ffbb7/selected {"id": "235f6f9d-6680-481a-8217-f4690a0ffbb7"}</msg>
+<msg timestamp="20230207 21:40:58.695" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/element/235f6f9d-6680-481a-8217-f4690a0ffbb7/selected HTTP/1.1" 200 15</msg>
+<msg timestamp="20230207 21:40:58.695" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.695" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/235f6f9d-6680-481a-8217-f4690a0ffbb7/click {"id": "235f6f9d-6680-481a-8217-f4690a0ffbb7"}</msg>
+<msg timestamp="20230207 21:40:58.717" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/element/235f6f9d-6680-481a-8217-f4690a0ffbb7/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.718" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.718" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:58.660" endtime="20230207 21:40:58.718"/>
+</kw>
+<msg timestamp="20230207 21:40:58.718" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:58.589" endtime="20230207 21:40:58.718"/>
+</kw>
+<kw name="Entao deve ser confirmado que o CEP não existe" library="BuscaCep">
+<msg timestamp="20230207 21:40:58.719" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="btn_pesquisar"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230207 21:40:58.720" level="TRACE">Arguments: [ '//*[@id="btn_pesquisar"]' ]</msg>
+<msg timestamp="20230207 21:40:58.720" level="INFO">Clicking element '//*[@id="btn_pesquisar"]'.</msg>
+<msg timestamp="20230207 21:40:58.720" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/elements {"using": "xpath", "value": "//*[@id=\"btn_pesquisar\"]"}</msg>
+<msg timestamp="20230207 21:40:58.731" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20230207 21:40:58.731" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.732" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/a182501c-72f1-4fb9-81d6-8e094e87905e/click {"id": "a182501c-72f1-4fb9-81d6-8e094e87905e"}</msg>
+<msg timestamp="20230207 21:40:58.761" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/element/a182501c-72f1-4fb9-81d6-8e094e87905e/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230207 21:40:58.761" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.761" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230207 21:40:58.719" endtime="20230207 21:40:58.761"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="mensagem-resultado"]</arg>
+<arg>Não há dados a serem exibidos</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230207 21:40:58.762" level="TRACE">Arguments: [ '//*[@id="mensagem-resultado"]' | 'Não há dados a serem exibidos' ]</msg>
+<msg timestamp="20230207 21:40:58.762" level="DEBUG">POST http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/elements {"using": "xpath", "value": "//*[@id=\"mensagem-resultado\"]"}</msg>
+<msg timestamp="20230207 21:40:58.773" level="DEBUG">http://localhost:63497 "POST /session/47a45f2b542d9068eafb74f840f5f2bd/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20230207 21:40:58.773" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.773" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/element/7e8c214d-b09e-4a89-8486-ea8c8c3e5ec2/text {"id": "7e8c214d-b09e-4a89-8486-ea8c8c3e5ec2"}</msg>
+<msg timestamp="20230207 21:40:58.785" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/element/7e8c214d-b09e-4a89-8486-ea8c8c3e5ec2/text HTTP/1.1" 200 12</msg>
+<msg timestamp="20230207 21:40:58.785" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230207 21:40:58.785" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20230207 21:40:58.786" level="DEBUG">GET http://localhost:63497/session/47a45f2b542d9068eafb74f840f5f2bd/screenshot {}</msg>
+<msg timestamp="20230207 21:40:58.904" level="DEBUG">http://localhost:63497 "GET /session/47a45f2b542d9068eafb74f840f5f2bd/screenshot HTTP/1.1" 200 27644</msg>
+<msg timestamp="20230207 21:40:58.905" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230207 21:40:58.906" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230207 21:40:58.906" level="TRACE">Return: 'C:\\Testes\\projeto b3\\Robot_BuscaCep\\log\\selenium-screenshot-4.png'</msg>
+<status status="PASS" starttime="20230207 21:40:58.785" endtime="20230207 21:40:58.906"/>
+</kw>
+<msg timestamp="20230207 21:40:58.908" level="FAIL">Element '//*[@id="mensagem-resultado"]' should have contained text 'Não há dados a serem exibidos' but its text was ''.</msg>
+<msg timestamp="20230207 21:40:58.908" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\sanma\AppData\Local\Programs\Python\Python310\lib\site-packages\SeleniumLibrary\__init__.py", line 492, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+  File "C:\Users\sanma\AppData\Local\Programs\Python\Python310\lib\site-packages\robotlibcore.py", line 94, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+  File "C:\Users\sanma\AppData\Local\Programs\Python\Python310\lib\site-packages\SeleniumLibrary\keywords\element.py", line 89, in element_should_contain
+    raise AssertionError(message)</msg>
+<status status="FAIL" starttime="20230207 21:40:58.761" endtime="20230207 21:40:58.908"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230207 21:40:58.908" endtime="20230207 21:40:58.908"/>
+</kw>
+<status status="FAIL" starttime="20230207 21:40:58.719" endtime="20230207 21:40:58.909"/>
+</kw>
+<status status="FAIL" starttime="20230207 21:40:55.857" endtime="20230207 21:40:58.909">Element '//*[@id="mensagem-resultado"]' should have contained text 'Não há dados a serem exibidos' but its text was ''.</status>
+</test>
+<status status="FAIL" starttime="20230207 21:40:55.642" endtime="20230207 21:40:58.910"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="BuscaCepTest">BuscaCepTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
